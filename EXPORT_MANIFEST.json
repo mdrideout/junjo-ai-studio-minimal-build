@@ -15,7 +15,7 @@
     {
       "mode": "0644",
       "path": "GENERATED_SOURCE.md",
-      "sha256": "adecb09712e9189fc9fd09a6314eb3207778ff2ae5987beeb73cb8e45c3ddb17",
+      "sha256": "7435e9ec622ae31df35e9347187102d5566284ea0a2a69d27590a4688c1c4f78",
       "size": 570
     },
     {
@@ -27,13 +27,13 @@
     {
       "mode": "0644",
       "path": "README.md",
-      "sha256": "7d594d297849efcb8ad2d526993966f3241d374d40bccbfc6345c55aea6dd384",
+      "sha256": "85f77bf8bb9ee07e3f03ba1bf492e097cd603b78bb1f96c85ef5180fa73e8aad",
       "size": 18272
     },
     {
       "mode": "0644",
       "path": "docker-compose.yml",
-      "sha256": "35e7bb848f3c760023f9f55ab9a6ce67d582b0cfdc8f765b54b16ee08794bcc9",
+      "sha256": "13048a8e6a91a12ec18355cfdd16a0720fbfbcf1a9307ff48e14dfede941f5c9",
       "size": 3917
     },
     {
@@ -56,8 +56,8 @@
     "distribution": "minimal",
     "schema_version": 1,
     "source_repository": "https://github.com/mdrideout/junjo",
-    "source_revision": "ed39c7708e8f9c24f20eaef29211ab36ef3ba0be",
-    "studio_version": "0.81.2"
+    "source_revision": "b759fb2b1b3a51bf26258a441064634c65a4aea4",
+    "studio_version": "0.81.3"
   },
-  "tree_sha256": "5a14b09326cd4e84b3b21b4baa1e2ee6b6efca2855ee687af5cffb5b2a4ea3df"
+  "tree_sha256": "a3e86d174739db7adaebdd8d8922574aab3cddce754f07bb823c0a7b875d4fe7"
 }
