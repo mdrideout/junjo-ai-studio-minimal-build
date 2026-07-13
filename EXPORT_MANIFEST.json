@@ -1,0 +1,63 @@
+{
+  "inventory": [
+    {
+      "mode": "0644",
+      "path": ".env.example",
+      "sha256": "6d957b3986a463eef197c85d805b06513333ae709af4cebd4645f1175dcdf4f2",
+      "size": 13338
+    },
+    {
+      "mode": "0644",
+      "path": ".gitignore",
+      "sha256": "7c3c229d5d54ffc74d1f021f74bcb0d55fc2e999c3b2f5b9acf171b727eeed4c",
+      "size": 180
+    },
+    {
+      "mode": "0644",
+      "path": "GENERATED_SOURCE.md",
+      "sha256": "adecb09712e9189fc9fd09a6314eb3207778ff2ae5987beeb73cb8e45c3ddb17",
+      "size": 570
+    },
+    {
+      "mode": "0644",
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "size": 11358
+    },
+    {
+      "mode": "0644",
+      "path": "README.md",
+      "sha256": "7d594d297849efcb8ad2d526993966f3241d374d40bccbfc6345c55aea6dd384",
+      "size": 18272
+    },
+    {
+      "mode": "0644",
+      "path": "docker-compose.yml",
+      "sha256": "35e7bb848f3c760023f9f55ab9a6ce67d582b0cfdc8f765b54b16ee08794bcc9",
+      "size": 3917
+    },
+    {
+      "mode": "0644",
+      "path": "examples/caddy/Caddyfile",
+      "sha256": "bebd2188d315375898bd6c65674c7fb9d0e13c6a111ce72b460b45f9f9b20594",
+      "size": 1845
+    },
+    {
+      "mode": "0755",
+      "path": "scripts/junjo",
+      "sha256": "b08d1c4bf0efae7f13cfd826dd830fc9b596ee4b963e5bc2d01e300fdb60fd3f",
+      "size": 16535
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "canonical_source_path": "apps/studio/deployments/minimal",
+    "compatible_sdk_version": "0.63.0",
+    "distribution": "minimal",
+    "schema_version": 1,
+    "source_repository": "https://github.com/mdrideout/junjo",
+    "source_revision": "ed39c7708e8f9c24f20eaef29211ab36ef3ba0be",
+    "studio_version": "0.81.2"
+  },
+  "tree_sha256": "5a14b09326cd4e84b3b21b4baa1e2ee6b6efca2855ee687af5cffb5b2a4ea3df"
+}
