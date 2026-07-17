@@ -4,14 +4,13 @@
 > [`apps/studio/deployments/minimal`](https://github.com/mdrideout/junjo/tree/master/apps/studio/deployments/minimal)
 > in the Junjo platform monorepo. The standalone
 > [`junjo-ai-studio-minimal-build`](https://github.com/mdrideout/junjo-ai-studio-minimal-build)
-> repository is the designated release mirror for convenient cloning. Its
-> first monorepo-driven refresh remains a cutover gate. Submit changes to the
-> canonical source; direct mirror changes will be overwritten after that
-> publication path is active.
+> repository is the generated release mirror for convenient cloning. Submit
+> changes to the canonical source; direct mirror changes are overwritten by
+> the release publication workflow.
 
 A minimal, opinionless Docker Compose setup for [Junjo AI Studio](https://github.com/mdrideout/junjo/tree/master/apps/studio) containing only the essential services. This minimal foundation provides the three core services needed to run Junjo AI Studio, with zero opinions about reverse proxies, networking, or infrastructure choices.
 
-This template pins Junjo AI Studio `0.81.5`. Applications that emit Junjo workflow telemetry should use Junjo `0.63.0`.
+This template pins Junjo AI Studio `0.82.0`. Applications that emit Junjo workflow telemetry should use Junjo `0.65.0`.
 
 A Junjo AI Studio instance can be used for an unlimited number of projects that use the [Junjo](https://github.com/mdrideout/junjo) python AI graph workflow framework. Any Junjo Application can send telemetry to this Junjo AI Studio instance, assuming it has valid API Key credentials.
 
@@ -135,13 +134,15 @@ Junjo AI Studio consists of three Docker services:
    ```
    Then generate and set secrets:
    ```bash
-   # Generate TWO separate keys (run this command twice)
+   # Generate THREE separate keys
+   openssl rand -base64 32
    openssl rand -base64 32
    openssl rand -base64 32
 
    # Edit .env and replace:
    # - JUNJO_SESSION_SECRET with the first generated value
    # - JUNJO_SECURE_COOKIE_KEY with the second generated value
+   # - JUNJO_INTERNAL_GRPC_TOKEN with the third generated value
    ```
 
 3. Start services:
@@ -261,9 +262,9 @@ Modern cloud platforms (Render, Railway) can host Junjo AI Studio's three servic
 
 **Deployment Approach:**
 - Create 3 separate "Web Services" from the Docker images:
-  - `mdrideout/junjo-ai-studio-backend:0.81.5`
-  - `mdrideout/junjo-ai-studio-ingestion:0.81.5`
-  - `mdrideout/junjo-ai-studio-frontend:0.81.5`
+  - `mdrideout/junjo-ai-studio-backend:0.82.0`
+  - `mdrideout/junjo-ai-studio-ingestion:0.82.0`
+  - `mdrideout/junjo-ai-studio-frontend:0.82.0`
 - Add persistent disks for data volumes
 
 **Volume Configuration:**
@@ -289,6 +290,7 @@ JUNJO_PROD_BACKEND_URL=https://api.your-domain.com
 JUNJO_PROD_INGESTION_URL=https://ingestion.your-domain.com
 JUNJO_SESSION_SECRET=<generated-secret>
 JUNJO_SECURE_COOKIE_KEY=<generated-secret>
+JUNJO_INTERNAL_GRPC_TOKEN=<generated-secret>
 ```
 
 **Public Access:**
@@ -316,17 +318,17 @@ JUNJO_SECURE_COOKIE_KEY=<generated-secret>
 ```
 Services to Deploy:
 1. junjo-backend
-   - Image: mdrideout/junjo-ai-studio-backend:0.81.5
+   - Image: mdrideout/junjo-ai-studio-backend:0.82.0
    - Port: 26154
    - Volume: /app/.dbdata
 
 2. junjo-ingestion
-   - Image: mdrideout/junjo-ai-studio-ingestion:0.81.5
+   - Image: mdrideout/junjo-ai-studio-ingestion:0.82.0
    - Port: 26155
    - Volume: /app/.dbdata
 
 3. junjo-frontend
-   - Image: mdrideout/junjo-ai-studio-frontend:0.81.5
+   - Image: mdrideout/junjo-ai-studio-frontend:0.82.0
    - Port: 26153
 ```
 
@@ -345,6 +347,7 @@ JUNJO_PROD_BACKEND_URL=https://api.your-app.up.railway.app
 JUNJO_PROD_INGESTION_URL=https://ingestion.your-app.up.railway.app
 JUNJO_SESSION_SECRET=<generated-secret>
 JUNJO_SECURE_COOKIE_KEY=<generated-secret>
+JUNJO_INTERNAL_GRPC_TOKEN=<generated-secret>
 JUNJO_ALLOW_ORIGINS=https://app.your-app.up.railway.app
 ```
 
@@ -396,7 +399,7 @@ For a complete working example with Caddy bundled, see the [Junjo AI Studio Depl
 
 ## Junjo Application Telemetry Configuration
 
-[Junjo's python library](https://python-api.junjo.ai/) uses OpenTelemetry to send structured AI graph workflow execution spans to Junjo AI Studio or any other OpenTelemetry destination.
+[Junjo's Python library](https://junjo.ai/docs/python/) uses OpenTelemetry to send structured AI graph workflow execution spans to Junjo AI Studio or any other OpenTelemetry destination.
 
 The configuration differs based on your [deployment scenario](#deployment-scenarios). Choose the appropriate configuration below:
 
