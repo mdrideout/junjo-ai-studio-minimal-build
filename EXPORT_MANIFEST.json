@@ -3,8 +3,8 @@
     {
       "mode": "0644",
       "path": ".env.example",
-      "sha256": "0c9fc1942d8a7431bf0bdd3f87b6f2b5d7d5502cb9cb5ee3f6ecb18456506c4e",
-      "size": 14194
+      "sha256": "96c7b63fd17cdda24adba3f48c10c2d8676a304d92f0ce14531f80a72eb67f35",
+      "size": 11769
     },
     {
       "mode": "0644",
@@ -15,7 +15,7 @@
     {
       "mode": "0644",
       "path": "GENERATED_SOURCE.md",
-      "sha256": "7b0456299a72f996da7502bc8a11d420e79d1ab779e0f4830aa700955ecc9f89",
+      "sha256": "410ad475fc5bf3c009e3a554b6cecd3e8216796dd09e87beebbc0e727ccf5df0",
       "size": 570
     },
     {
@@ -27,26 +27,26 @@
     {
       "mode": "0644",
       "path": "README.md",
-      "sha256": "23a849c1652b6f07bdcb03976fd7051d408591fe0878d254d5067fed3fabdee7",
-      "size": 18932
+      "sha256": "4e71ffd209187f3be254c72965f5fd5cfb7e08046fc5f2667ac971eb3767473c",
+      "size": 18367
     },
     {
       "mode": "0644",
       "path": "docker-compose.yml",
-      "sha256": "46c1b2a0ac1bccc771036e069fd1c48ecfa4f390fd6fbd0ea72ba8b77b7c49c7",
-      "size": 4403
+      "sha256": "f410dbf8a3f6eb725150fc521fb3ef01af0d9a70fde17a1bf4c9bab197a0ac27",
+      "size": 3997
     },
     {
       "mode": "0644",
       "path": "examples/caddy/Caddyfile",
-      "sha256": "bebd2188d315375898bd6c65674c7fb9d0e13c6a111ce72b460b45f9f9b20594",
-      "size": 1845
+      "sha256": "09dec92d1cfb0ceaf26b40140c0fd9a7fab453f9f208f3f0815086e2dcc70fc3",
+      "size": 1644
     },
     {
       "mode": "0755",
       "path": "scripts/junjo",
-      "sha256": "b8bb47740c9cd4351ed087396fbc12934ae420f4e7c4912ca82dc6a82f288443",
-      "size": 16667
+      "sha256": "73fdde589b23e65dd65b9c7a1cf1704e59f1ba1d0dcb722a8f81254c9f143710",
+      "size": 16464
     }
   ],
   "schema_version": 1,
@@ -56,8 +56,8 @@
     "distribution": "minimal",
     "schema_version": 1,
     "source_repository": "https://github.com/mdrideout/junjo",
-    "source_revision": "1b5a79882124f1b854eb17720013ac35476d25d9",
-    "studio_version": "0.85.0"
+    "source_revision": "eac4423485d2b7ee04cebbcc91c269880b714e8b",
+    "studio_version": "0.86.0"
   },
-  "tree_sha256": "83c0544ed178e3823be3628a5db4d3d3fffd5083ed4e69a41c6556d8d55c9fa4"
+  "tree_sha256": "45980a4ba9b508ec24e22cdfbadb7edaa26656a5407551b29faf80fcb03b1f54"
 }
